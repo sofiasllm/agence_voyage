@@ -1,9 +1,6 @@
-/* =============================== */
-/* 0. Variables et Réinitialisation */
-/* =============================== */
 :root {
-    --primary-color: #007bff; /* Bleu voyage */
-    --secondary-color: #28a745; /* Vert pour l'éco */
+    --primary-color: #007bff; 
+    --secondary-color: #28a745; 
     --text-dark: #333;
     --text-light: #f4f4f4;
     --bg-light: #f8f9fa;
@@ -47,9 +44,7 @@ h2 {
     background-color: var(--bg-light);
 }
 
-/* =============================== */
 /* 1. Boutons (CTA) */
-/* =============================== */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -83,10 +78,7 @@ h2 {
     transform: translateY(-2px);
 }
 
-
-/* =============================== */
 /* 2. Navbar */
-/* =============================== */
 .main-header {
     background-color: white;
     box-shadow: var(--shadow-light);
@@ -131,7 +123,7 @@ h2 {
 }
 
 .burger-menu {
-    display: none; /* Caché sur desktop */
+    display: none; 
     font-size: 1.5rem;
     background: none;
     border: none;
@@ -139,12 +131,8 @@ h2 {
     color: var(--text-dark);
 }
 
-
-/* =============================== */
 /* 3. Hero Section */
-/* =============================== */
 .hero-section {
-    /* Image de fond : Chemin corrigé vers le dossier 'image' */
     background: url('image/image1.jpg') no-repeat center center/cover; 
     height: 70vh; 
     min-height: 400px;
@@ -187,17 +175,14 @@ h2 {
     font-weight: 300;
 }
 
-
-/* =============================== */
 /* 4. Section Cards (Flexbox) */
-/* =============================== */
 .section-cards {
     padding: 80px 0;
     text-align: center;
 }
 
 .card-grid {
-    display: flex; /* Flexbox pour l'alignement horizontal */
+    display: flex; 
     gap: 30px;
     justify-content: space-between;
     margin-top: 40px;
@@ -233,22 +218,19 @@ h2 {
     color: #555;
 }
 
-
-/* =============================== */
-/* 5. Section Présentation (Split 50/50) */
-/* =============================== */
+/* 5. Section Présentation */
 .section-split {
     padding: 100px 0;
 }
 
 .split-layout {
-    display: flex; /* Flexbox pour le split 50/50 */
+    display: flex;
     align-items: center;
     gap: 50px;
 }
 
 .split-image, .split-content {
-    flex: 1; /* Chaque bloc prend 50% de la largeur */
+    flex: 1; 
 }
 
 .split-image img {
@@ -267,11 +249,8 @@ h2 {
 .split-content p:last-of-type {
     margin-bottom: 0;
 }
-
-
-/* =============================== */
+ 
 /* 6. Section FAQ (Accordéon) - BONUS */
-/* =============================== */
 .section-faq {
     padding: 80px 0;
 }
@@ -317,7 +296,7 @@ h2 {
 .accordion-content {
     background-color: white;
     padding: 0 25px;
-    max-height: 0; /* Caché par défaut */
+    max-height: 0; 
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
@@ -341,10 +320,7 @@ h2 {
     transform: rotate(180deg);
 }
 
-
-/* =============================== */
 /* 7. Formulaire Basique */
-/* =============================== */
 .section-form {
     padding: 80px 0;
     text-align: center;
@@ -386,9 +362,7 @@ h2 {
 }
 
 
-/* =============================== */
 /* 8. Footer */
-/* =============================== */
 .main-footer {
     background-color: var(--text-dark);
     color: var(--text-light);
@@ -397,14 +371,10 @@ h2 {
     font-size: 0.9rem;
 }
 
-
-/* =============================== */
-/* 9. Media Queries (Responsive Design - 5 pts) */
-/* =============================== */
-
+/* 9. Media Queries  */
 @media (max-width: 900px) {
     
-    /* Section Cards pour tablette */
+    /* Section Cards */
     .card-grid {
         flex-wrap: wrap;
         justify-content: center;
