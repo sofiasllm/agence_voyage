@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Travel - Agence de Voyage Éco-responsable</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <header class="main-header"> 
+        <nav class="container navbar"> <div class="logo">
+                <a href="#">Dream Travel</a> </div>
+            
+            <ul class="nav-links"> <li><a href="#hero">Accueil</a></li>
+                <li><a href="#services">Destinations</a></li>
+                <li><a href="#presentation">Qui Sommes-Nous</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="burger-menu" aria-label="Ouvrir le menu de navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content container">
+            <h1>PARTEZ À L'AVENTURE</h1> <p>Explorez le monde avec Dream Travel. Des voyages inoubliables vous attendent.</p>
+            <a href="#services" class="btn primary-btn">DÉCOUVRIR NOS DESTINATIONS</a> </div>
+    </section>
+
+    <section id="services" class="section-cards">
+        <div class="container">
+            <h2>Nos 3 Promesses Voyage</h2>
+            
+            <div class="card-grid">
+                
+                <div class="card">
+                    <i class="fas fa-leaf icon"></i>
+                    <h3>Voyage Éco-Responsable</h3>
+                    <p>Nous privilégions les partenaires locaux et réduisons notre empreinte carbone.</p>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-headset icon"></i>
+                    <h3>Support 24/7</h3>
+                    <p>Une équipe d'experts dédiée est disponible jour et nuit pour vous assister.</p>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-wallet icon"></i>
+                    <h3>Meilleur Prix Garanti</h3>
+                    <p>Des forfaits transparents, sans frais cachés, pour un budget maîtrisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="presentation" class="section-split bg-light">
+        <div class="container split-layout">
+            
+            <div class="split-image">
+                <img src="image/image2.jpg" alt="Vue d'un fjord en Norvège" loading="lazy">
+            </div>
+            
+            <div class="split-content">
+                <h2>Qui sommes-nous ?</h2>
+                <p>Dream Travel est née d'une passion pour l'exploration respectueuse. Notre mission est de vous connecter à des destinations uniques tout en favorisant un tourisme durable.</p>
+                <p>Depuis 10 ans, nous sélectionnons méticuleusement des circuits authentiques, loin des foules. Nous croyons que voyager, c'est apprendre, grandir et laisser le monde meilleur que nous l'avons trouvé. Notre expertise vous garantit une expérience personnalisée et sans souci.</p>
+                <a href="#contact" class="btn secondary-btn">Contactez nos experts</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="faq" class="section-faq">
+        <div class="container">
+            <h2>Questions Fréquentes</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Quelles sont vos destinations phares ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Nous sommes spécialisés dans les voyages d'aventure et les destinations lointaines, notamment l'Islande, la Patagonie et le Népal. Nous proposons également des circuits européens éco-certifiés.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Quelle est votre politique d'annulation ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Notre politique d'annulation varie selon le forfait choisi. Pour la plupart de nos voyages, l'annulation est gratuite jusqu'à 30 jours avant le départ. Veuillez consulter les conditions générales spécifiques à votre réservation.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        Proposez-vous des voyages sur mesure ?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolument ! Tous nos voyages peuvent être personnalisés. Contactez-nous via le formulaire ci-dessous et nous créerons un itinéraire qui correspond parfaitement à vos envies et à votre budget.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section-form bg-light">
+        <div class="container">
+            <h2>Planifiez votre voyage</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="email">Votre Email :</label>
+                    <input type="email" id="email" name="email" required> </div>
+                <div class="form-group">
+                    <label for="message">Votre Message ou demande :</label>
+                    <textarea id="message" name="message" rows="5" required></textarea> </div>
+                <button type="submit" class="btn primary-btn">Envoyer ma Demande</button> </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Dream Travel - Tous droits réservés.</p> </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Script pour le Menu Burger
+            const burger = document.querySelector('.burger-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (burger && navLinks) {
+                burger.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-active');
+                    burger.classList.toggle('toggle');
+                });
+            }
+
+            // Script pour l'accordéon (FAQ)
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const icon = header.querySelector('i');
+                    
+                    // Fermer les autres items (pour n'en garder qu'un ouvert)
+                    document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                        if (otherHeader !== header && otherHeader.getAttribute('aria-expanded') === 'true') {
+                            otherHeader.setAttribute('aria-expanded', 'false');
+                            otherHeader.nextElementSibling.style.maxHeight = null;
+                            otherHeader.querySelector('i').classList.remove('rotate');
+                        }
+                    });
+                    
+                    // Ouvrir ou fermer l'item actuel
+                    const isExpanded = header.getAttribute('aria-expanded') === 'true' || false;
+                    header.setAttribute('aria-expanded', String(!isExpanded));
+                    
+                    if (isExpanded) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('rotate');
+                    } else {
+                        // Ouvre l'accordéon en ajustant la hauteur au contenu
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add('rotate');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

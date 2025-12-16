@@ -1,0 +1,485 @@
+/* =============================== */
+/* 0. Variables et Réinitialisation */
+/* =============================== */
+:root {
+    --primary-color: #007bff; /* Bleu voyage */
+    --secondary-color: #28a745; /* Vert pour l'éco */
+    --text-dark: #333;
+    --text-light: #f4f4f4;
+    --bg-light: #f8f9fa;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+/* =============================== */
+/* 1. Boutons (CTA) */
+/* =============================== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.secondary-btn:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+}
+
+
+/* =============================== */
+/* 2. Navbar */
+/* =============================== */
+.main-header {
+    background-color: white;
+    box-shadow: var(--shadow-light);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.burger-menu {
+    display: none; /* Caché sur desktop */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+
+/* =============================== */
+/* 3. Hero Section */
+/* =============================== */
+.hero-section {
+    /* Image de fond : Chemin corrigé vers le dossier 'image' */
+    background: url('image/image1.jpg') no-repeat center center/cover; 
+    height: 70vh; 
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Overlay pour lisibilité du texte */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--text-light);
+    max-width: 900px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+
+/* =============================== */
+/* 4. Section Cards (Flexbox) */
+/* =============================== */
+.section-cards {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.card-grid {
+    display: flex; /* Flexbox pour l'alignement horizontal */
+    gap: 30px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1; 
+    padding: 30px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card .icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+/* =============================== */
+/* 5. Section Présentation (Split 50/50) */
+/* =============================== */
+.section-split {
+    padding: 100px 0;
+}
+
+.split-layout {
+    display: flex; /* Flexbox pour le split 50/50 */
+    align-items: center;
+    gap: 50px;
+}
+
+.split-image, .split-content {
+    flex: 1; /* Chaque bloc prend 50% de la largeur */
+}
+
+.split-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: var(--shadow-light);
+}
+
+.split-content h2 {
+    text-align: left;
+    margin-top: 0;
+}
+
+.split-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/* =============================== */
+/* 6. Section FAQ (Accordéon) - BONUS */
+/* =============================== */
+.section-faq {
+    padding: 80px 0;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: white;
+    color: var(--text-dark);
+    padding: 18px 25px;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.accordion-header:hover {
+    background-color: var(--bg-light);
+}
+
+.accordion-header[aria-expanded="true"] {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.accordion-content {
+    background-color: white;
+    padding: 0 25px;
+    max-height: 0; /* Caché par défaut */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+    margin: 0;
+    line-height: 1.5;
+    border-top: 1px solid #eee;
+}
+
+.accordion-header[aria-expanded="true"] + .accordion-content {
+    padding: 0 25px 20px 25px;
+}
+
+.accordion-header i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header i.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* =============================== */
+/* 7. Formulaire Basique */
+/* =============================== */
+.section-form {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form .primary-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =============================== */
+/* 8. Footer */
+/* =============================== */
+.main-footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+
+/* =============================== */
+/* 9. Media Queries (Responsive Design - 5 pts) */
+/* =============================== */
+
+@media (max-width: 900px) {
+    
+    /* Section Cards pour tablette */
+    .card-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card {
+        flex-basis: calc(50% - 15px); /* Deux cartes par ligne */
+        margin-bottom: 30px;
+    }
+
+    /* Section Split pour tablette */
+    .split-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .split-image {
+        order: -1; /* L'image apparaît avant le texte en colonne */
+        margin-bottom: 30px;
+    }
+    
+    .split-content h2 {
+        text-align: center;
+    }
+    
+    .split-content .btn {
+        display: inline-block; 
+    }
+}
+
+@media (max-width: 600px) {
+    /* Adaptation Mobile (Smartphone) */
+    
+    /* Navbar / Menu Burger - Bonus Mobile (+1 pt) */
+    .nav-links {
+        /* Menu caché et glissant */
+        position: absolute;
+        right: 0;
+        top: 65px; 
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%); 
+        transition: transform 0.3s ease-in-out;
+        z-index: 90;
+        padding: 20px 0;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0); 
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .burger-menu {
+        display: block; /* Afficher le bouton burger */
+    }
+    
+    /* Hero */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Cards */
+    .card {
+        flex-basis: 100%; /* Une carte par ligne */
+        margin-bottom: 20px;
+    }
+    
+    /* Formulaire */
+    .contact-form {
+        padding: 20px;
+    }
+}
